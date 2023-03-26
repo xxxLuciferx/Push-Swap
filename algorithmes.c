@@ -6,7 +6,7 @@
 /*   By: khaimer <khaimer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 14:56:12 by khaimer           #+#    #+#             */
-/*   Updated: 2023/03/19 15:06:09 by khaimer          ###   ########.fr       */
+/*   Updated: 2023/03/26 19:51:35 by khaimer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,51 @@ void	sort_5(t_tools *tools)
 	sort_3(tools->stack_a);
 	while (tools->stack_b->size > 0)
 		push_a(tools);
+}
+
+void	sort_all(t_tools *tools)
+{
+	while (tools->stack_b->size > 0)
+	{
+		tools->node_index = index_bigest(tools->stack_b);
+		while (tools->stack_b->ptr->content != bigest(tools->stack_b))
+		{
+			if (tools->node_index < (tools->stack_b->size / 2))
+				rotate_b(tools->stack_b);
+			else
+				reverse_rotate_b(tools->stack_b);
+		}
+		if (tools->stack_b->ptr->content == bigest(tools->stack_b))
+			push_a(tools);
+	}
+}
+
+
+void	sort_range(t_tools *tools)
+{
+	tools->range_min = 0;
+	if (tools->stack_a->size >= 90)
+		tools->range_max = 15;
+	if (tools->stack_a->size >= 150)
+		tools->range_max = 30;
+	while (tools->stack_a->ptr)
+	{
+		tools->node_index = get_index(tools);
+		if ((tools->node_index >= tools->range_min)
+			&& tools->node_index <= tools->range_max)
+		{
+			push_b(tools);
+			tools->range_max++;
+			tools->range_min++;
+		}
+		else if (tools->node_index >= tools->range_max)
+			rotate_a(tools->stack_a);
+		else if (tools->node_index <= tools->range_min)
+		{
+			push_b(tools);
+			rotate_b(tools->stack_b);
+			tools->range_max++;
+			tools->range_min++;
+		}
+	}
 }

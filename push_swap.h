@@ -34,10 +34,15 @@ typedef struct s_tools
 
 
 int valid_arg(char *str);
+void	*ft_calloc(size_t count, size_t size);
 
 //List_to_Stack
-void	freed(char **tab);
-int		string_validator(char *str);
+// void	freed(char **tab);
+// int		string_validator(char *str);
+
+void	sort_all(t_tools *tools);
+void	sort_range(t_tools *tools);
+
 char	**split_args(char **str);
 char	*ft_strjoin(char *s1, char *s2);
 char	**ft_split(char const *s, char c);
@@ -46,7 +51,7 @@ void	list_to_stack(t_stack *stack, t_list *l_numbers);
 void    sorting_list(t_list *l_numbers);
 void	ft_crush();
 
-//swaps
+
 void	rotate_a(t_stack *stack);
 void	rotate_b(t_stack *stack);
 void	rr(t_tools *rools);
@@ -65,7 +70,6 @@ int		pop(t_stack *head);
 void	sort_3(t_stack *stack);
 void	sort_5(t_tools *tools);
 
-//tools
 int		ft_atoi(const char *str);
 int		index_bigest(t_stack *stack);
 int		get_index(t_tools *tools);
@@ -83,7 +87,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
 
 //Magic
 
-void	sorting_algorithmes(t_tools *tools);
+// void	sorting_algorithmes(t_tools *tools);
 int		index_smallest(t_stack *stack);
 void	push_to_b(t_stack *stack, int content);
 

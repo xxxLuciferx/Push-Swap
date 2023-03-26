@@ -6,31 +6,12 @@
 /*   By: khaimer <khaimer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 22:08:42 by khaimer           #+#    #+#             */
-/*   Updated: 2023/03/20 20:40:32 by khaimer          ###   ########.fr       */
+/*   Updated: 2023/03/26 20:01:55 by khaimer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	check_valid_char(char c)
-{
-	if ((c >= '0' && c <= '9') || c == '\0')
-		return (1);
-	return (0);
-}
-
-void	freed(char **tab)
-{
-	int	i;
-
-	i = 0;
-	while (tab[i])
-	{
-		free(tab[i]);
-		i++;
-	}
-	free(tab);
-}
 
 int valid_arg(char *str)
 {

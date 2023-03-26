@@ -6,7 +6,7 @@
 /*   By: khaimer <khaimer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 16:05:35 by khaimer           #+#    #+#             */
-/*   Updated: 2023/03/24 19:27:12 by khaimer          ###   ########.fr       */
+/*   Updated: 2023/03/26 19:50:33 by khaimer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,18 +82,6 @@ void	instruction(t_tools *tools, char *str)
 	else
 		ft_crush();
 }
-
-// void	print_stack(t_stack *stack)
-// {
-// 	t_list *ptr;
-
-// 	ptr = stack->ptr;
-// 	while (ptr)
-// 	{
-// 		printf("%d\n",ptr->content);
-// 		ptr = ptr->next;
-// 	}
-// }
 
 int main(int argc, char **argv)
 {

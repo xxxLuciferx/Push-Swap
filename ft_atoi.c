@@ -6,7 +6,7 @@
 /*   By: khaimer <khaimer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 01:48:01 by khaimer           #+#    #+#             */
-/*   Updated: 2023/03/24 19:49:37 by khaimer          ###   ########.fr       */
+/*   Updated: 2023/03/26 18:27:10 by khaimer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,9 @@ void	list_to_stack(t_stack *stack, t_list *l_numbers)
 	t_list	*ptr;
 
 	ptr = l_numbers;
-	
 	while (ptr)
 	{
-		ft_lstadd_back(&stack->ptr, ft_lstnew(ptr->content));
+		ft_lstadd_back(&(stack->ptr), ft_lstnew(ptr->content));
 		ptr = ptr->next;
 	}
 	stack->size = ft_lstsize(stack->ptr);
