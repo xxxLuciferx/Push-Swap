@@ -67,10 +67,10 @@ int	pop(t_stack *stack)
 {
 	int		content;
 	t_list	*ptr;
-	
+
 	content = stack->ptr->content;
 	ptr = stack->ptr;
-	if(stack->size >= 1)
+	if (stack->size >= 1)
 	{
 		stack->ptr = stack->ptr->next;
 		stack->size--;
@@ -84,8 +84,8 @@ void	rrr(t_tools *tools)
 	t_list	*last_node;
 	t_list	*blast_node;
 
-	if(tools->stack_a->size <= 1 || tools->stack_b->size <= 1)
-		return;
+	if (tools->stack_a->size <= 1 || tools->stack_b->size <= 1)
+		return ;
 	blast_node = tools->stack_a->ptr;
 	while (blast_node->next->next)
 		blast_node = blast_node->next;

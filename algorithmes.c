@@ -6,7 +6,7 @@
 /*   By: khaimer <khaimer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 14:56:12 by khaimer           #+#    #+#             */
-/*   Updated: 2023/03/26 19:51:35 by khaimer          ###   ########.fr       */
+/*   Updated: 2023/03/26 21:29:58 by khaimer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,14 +70,13 @@ void	sort_all(t_tools *tools)
 	}
 }
 
-
 void	sort_range(t_tools *tools)
 {
 	tools->range_min = 0;
 	if (tools->stack_a->size >= 90)
 		tools->range_max = 15;
 	if (tools->stack_a->size >= 150)
-		tools->range_max = 30;
+		tools->range_max = 35;
 	while (tools->stack_a->ptr)
 	{
 		tools->node_index = get_index(tools);

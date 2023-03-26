@@ -6,27 +6,31 @@
 /*   By: khaimer <khaimer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 22:08:42 by khaimer           #+#    #+#             */
-/*   Updated: 2023/03/26 20:01:55 by khaimer          ###   ########.fr       */
+/*   Updated: 2023/03/26 21:10:16 by khaimer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-
-int valid_arg(char *str)
+int	valid_arg(char *str)
 {
-    int i = 0;
-    while(str && str[i])
-    {
-		if((str[i] != ' ' && str[i] != '+' && str[i] != '-') && (str[i] < '0' || str[i] > '9'))
+	int	i;
+
+	i = 0;
+	while (str && str[i])
+	{
+		if ((str[i] != ' ' && str[i] != '+' && str[i] != '-') && (str[i] < '0'
+				|| str[i] > '9'))
 			ft_crush();
-		if((str[i] == '+' || str[i] == '-') && (str[i + 1] < '0' || str[i + 1] > '9'))
+		if ((str[i] == '+' || str[i] == '-') && (str[i + 1] < '0'
+				|| str[i + 1] > '9'))
 			ft_crush();
-        i++;
-		if((str[i - 1] >= '0' && str[i - 1] <= '9') && (str[i] == '+' || str[i] == '-'))
-			ft_crush();		
-    }
-    return 1;
+		i++;
+		if ((str[i - 1] >= '0' && str[i - 1] <= '9') && (str[i] == '+'
+				|| str[i] == '-'))
+			ft_crush();
+	}
+	return (1);
 }
 
 char	**split_args(char **str)

@@ -12,7 +12,6 @@
 
 #include "push_swap.h"
 
-
 char	*get_first(char *static_string)
 {
 	char	*line;
@@ -30,7 +29,7 @@ char	*get_first(char *static_string)
 	}
 	if (my_strlen(line) == 0)
 	{
-		free (line);
+		free(line);
 		line = NULL;
 	}
 	return (line);
@@ -72,7 +71,7 @@ int	ft_strchr(char *string, char c)
 		if (string[i] == c)
 			return (1);
 		i++;
-	}	
+	}
 	return (0);
 }
 

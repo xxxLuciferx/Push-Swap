@@ -17,7 +17,7 @@ void	rotate_a(t_stack *stack)
 	int		content;
 	t_list	*ptr;
 
-	if(stack->size <= 1)
+	if (stack->size <= 1)
 		return ;
 	ptr = stack->ptr;
 	content = pop(stack);
@@ -30,7 +30,7 @@ void	rotate_b(t_stack *stack)
 	int		content;
 	t_list	*ptr;
 
-	if(stack->size <= 1)
+	if (stack->size <= 1)
 		return ;
 	ptr = stack->ptr;
 	content = pop(stack);
@@ -43,12 +43,11 @@ void	rr(t_tools *tools)
 	int		content;
 	t_list	*ptr;
 
-	if(tools->stack_a->size <= 1 || tools->stack_b->size <= 1)
+	if (tools->stack_a->size <= 1 || tools->stack_b->size <= 1)
 		return ;
 	ptr = tools->stack_a->ptr;
 	content = pop(tools->stack_a);
 	push(tools->stack_a, content);
-
 	ptr = tools->stack_b->ptr;
 	content = pop(tools->stack_b);
 	push(tools->stack_b, content);
